@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title>contoh javascript dasar</title>
+</head>
+<body>
+    <h1>selamat datang di paktrikum java script!</h1>
+    <button id="tombolSapa">Klik saya!</button>
+    <button id="tombolUbahteks">kliksaya!</button>
+    <button id="tombolWarna">Kliksaya!</button>
+    <p id='teksPesan'>ini adalah teks yang akan berganti</p>
+
+    <script>
+        //mendapatkan elemen tombol berdasarkan id
+        const tombol=document.getElementById('tombolSapa');
+
+        //menambahkan event listener untuk aksi  'click'
+        tombol.addEventListener('click',function() {
+            alert('Hallo,selamat datang di dunia javascript!');
+        });
+    
+        //untuk tombol sapa (mengubah teks paragraf)
+        const tombolSapa=document.getElementById('tombolSapa');
+        tombolSapa.addEveListener('click',function(){
+            document.getElementById('teksPesan').textContent='Halo,Anda telah mrngubah teks ini dengan javaScript!'});
+
+        //Untuk tombol warna (mengubah warna latar belakang)
+        const tombolWarna=document.getElemantById('tombolWarna');
+        tombolWaarna.addEvenListener('click',function()
+           ( document.body.style.backgroundColor ='#E0FFFF';));
+    </script>
+</body>
+</html>
