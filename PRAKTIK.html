@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+   <title>Login</title>
+</head>
+<body>
+    <h2>Login admin</h2>
+        <form onsubmit="return cekLogin ()">
+        <label>masukan Nama:</label><br>
+        <input type="text"id="nama"><br><br>
+
+        <label>masukan password:</label><br>
+        <input type="text" id="password"><br><br>
+
+        <button type ="submit"> login</button>
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        
+        function cekLogin ()   {
+            var namaSiswa = document.getElementById("nama").value;
+            var passSiswa = document.getElementById("password").value;
+
+                 if (namaSiswa =="Admin" && passSiswa== "123456") {
+                 document.getElementById("hasil").innerHTML=
+                    "<span style='color:green;'>Hallo revan</span>";
+            } else {
+                document.getElementById("hasil").innerHTML=
+                    "<span style='color:red;'>maaf , nama tidak di kenal.</span>";
+
+            }
+            return false; //cegah reload
+        }
+    </script>
+</body>
+</html>
+        
